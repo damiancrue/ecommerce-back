@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { Sequelize } = require('sequelize');
 const users = require ('./models/users');
 const products = require ('./models/products');
@@ -11,9 +12,12 @@ const zipCodes = require ('./models/zipCodes');
 const taxCond = require ('./models/taxCond');
 const items = require ('./models/items');
 const categories = require ('./models/categories');
+const {DB_URI} = process.env
 
 // nueva instancia de sequelize // importante //
-const sequelize = new Sequelize('postgres://postgres:postgres@database-ecommerce.c96a6h1kumok.us-east-1.rds.amazonaws.com:5432/postgres', {logging:false})
+
+console.log(DB_URI)
+const sequelize = new Sequelize(DB_URI, {logging:false})
 
 users(sequelize);
 console.log('tabla users OK');
