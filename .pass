@@ -1,0 +1,8 @@
+AWS='La mejor contraseña es esta 1!'
+IdCuentaAWS='815753222272'
+
+Nombre de usuario maestro='postgres'
+Contraseña maestra='postgres'
+
+endpoint='database-ecommerce.c96a6h1kumok.us-east-1.rds.amazonaws.com'
+port0'5432'
